@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAUVBMVEX////MzMz6+vqysrLo6OiZmZn39/fw8PCwsLCfn5+QkJCBgYF/f393d3f4+Pi4uLg3d3fR0dHk5OTc3NzNzc3Z2dnNzc3Ozs5GRkZPT09HR0dEREROTk5ERERdXV1ZWVltbW1fX19ZWVmdnZ1fX19aWlpZWVlUVFRPT09bW1tZWVlERERmZmb////39/vt7e3m5ubQ0NDb29tCwsKwsLC6urrW1tbOzs6/v7/Nzc2vr6wMDBbW1toKCiLi4t8fHx8fHy8vL29vb+/v7////F6zQ7AAAAInRSTlMAAAAAAAYK+j6QISGPT6gjJ6XyJuiQ0OsNt3kWH+C3b3PRcAAAAhElEQVQYGe3BQQ6AMAwFUQK5/2dpNn2E20YWUEtpuTVLZjLSCjg7MdybZDAwvsSvjn3yYVzMKc2qHbILTCrGsCzzMbBvw1jq6sAAAAASUVORK5CYII=">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Emoji Generator</title>
+</head>
+<body>
+    <main>
+        <div class="box">
+          <a class="copy" onclick="copyEmojis()">
+                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                    stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                </svg>
+            </a>
+            <div class="emojis" id="emojisContainer">
+                😎
+            </div>
+            <div class="controls">
+                <button onclick="generateEmojis()">Go!</button>
+                <input type="number" id="emojiCount" placeholder="How many?" onkeydown="handleEnter(event)">
+            </div>
+        </div>
+        <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="themeSwitch" onchange="toggleTheme()" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
